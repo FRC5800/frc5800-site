@@ -1,0 +1,1450 @@
+.outreach-hero,
+.join-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 660px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #071a2b;
+}
+.outreach-hero > img,
+.join-hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  z-index: -2;
+  animation: heroIn 1.3s both;
+}
+.outreach-hero:before,
+.join-hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      #071b2e 0%,
+      #0b2439ed 34%,
+      #0b2439a6 63%,
+      #0b243942 100%
+    ),
+    linear-gradient(0deg, #071b2e8a, transparent 45%);
+}
+.outreach-hero-copy {
+  padding: 95px 0 105px;
+}
+.outreach-hero h1,
+.join-hero h1,
+.impact-hero h1 {
+  font-size: clamp(5.5rem, 10vw, 10.5rem);
+  line-height: 0.82;
+  margin: 24px 0 35px;
+  max-width: 1000px;
+  text-wrap: balance;
+}
+.outreach-hero h1 em,
+.join-hero h1 em,
+.impact-hero h1 em,
+.impact-manifesto h2 em {
+  font-style: normal;
+  color: #a8d7f1;
+}
+.outreach-hero p,
+.join-hero p {
+  max-width: 525px;
+  font-size: 1.12rem;
+  color: #e1edf4;
+  line-height: 1.65;
+}
+.outreach-hero-jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 0.81rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 1px solid #afd8ec;
+  padding: 13px 0;
+  margin-top: 25px;
+}
+.outreach-hero-jump svg {
+  transition: transform 0.25s;
+}
+.outreach-hero-jump:hover svg {
+  transform: translateY(5px);
+}
+.outreach-hero-index {
+  position: absolute;
+  right: 4%;
+  bottom: 32px;
+  letter-spacing: 0.22em;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #cce2ef;
+}
+.outreach-intro {
+  padding-block: 105px 90px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.65fr;
+  align-items: end;
+  gap: 9%;
+}
+.outreach-intro h2,
+.outreach-directory h2,
+.outreach-next h2,
+.impact-milestones h2,
+.impact-ripple h2,
+.join-process h2,
+.join-faq h2 {
+  font-size: clamp(3.4rem, 6vw, 6.5rem);
+  margin: 20px 0 0;
+}
+.outreach-intro p {
+  color: #c8dce8;
+  font-size: 1.05rem;
+  margin-bottom: 0;
+  max-width: 470px;
+}
+.outreach-directory {
+  padding-bottom: 125px;
+}
+.outreach-directory-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  border-top: 1px solid #6887a0;
+  padding-top: 40px;
+}
+.outreach-directory h2 {
+  font-size: clamp(3.4rem, 5.4vw, 5.7rem);
+}
+.outreach-count {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 2.1rem;
+  color: #95bfda;
+  white-space: nowrap;
+  margin-bottom: 8px;
+}
+.outreach-filters {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin: 30px 0 38px;
+}
+.outreach-filters button {
+  border: 1px solid #557792;
+  background: transparent;
+  color: #d8e7ef;
+  padding: 10px 18px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+.outreach-filters button:hover,
+.outreach-filters button.active {
+  background: #c4e4f4;
+  color: #10283f;
+  border-color: #c4e4f4;
+}
+.outreach-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.outreach-project-card {
+  display: block;
+  background: #173b59;
+  min-width: 0;
+  position: relative;
+  transition:
+    transform 0.25s,
+    background 0.25s;
+  overflow: hidden;
+}
+.outreach-project-card:hover {
+  background: #1e4b6e;
+  transform: translateY(-5px);
+}
+.outreach-project-card.feature {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+}
+.outreach-project-photo {
+  position: relative;
+  overflow: hidden;
+  height: 248px;
+  background: #28506a;
+}
+.outreach-project-card.feature .outreach-project-photo {
+  height: 100%;
+  min-height: 380px;
+}
+.outreach-project-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.outreach-project-card:hover img {
+  transform: scale(1.055);
+}
+.outreach-project-photo > span {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #0b2c46d9;
+  border: 1px solid #ffffff5e;
+  padding: 6px 10px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+.outreach-project-info {
+  min-height: 235px;
+  padding: 25px 27px 65px;
+  position: relative;
+}
+.outreach-project-card.feature .outreach-project-info {
+  padding: 37px 33px 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.outreach-project-info h3 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(2rem, 3vw, 3.4rem);
+  line-height: 0.97;
+  margin: 12px 0 14px;
+  text-transform: uppercase;
+}
+.outreach-project-info p {
+  font-size: 0.86rem;
+  color: #bed3e2;
+  line-height: 1.55;
+  margin: 0;
+}
+.outreach-project-arrow {
+  position: absolute;
+  bottom: 22px;
+  right: 24px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #a7c5d8;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.outreach-source,
+.home-impact-source {
+  font-size: 0.72rem !important;
+  line-height: 1.4;
+  color: #90b2c8;
+  margin: 28px 0 0;
+}
+.home-impact-source {
+  grid-column: 1/-1;
+  margin-top: 0;
+  color: #b9d6e6;
+}
+.outreach-lab {
+  background: #e7f3f8;
+  color: #10283f;
+  overflow: hidden;
+}
+.outreach-lab-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 7%;
+  min-height: 510px;
+}
+.outreach-lab .overline {
+  color: #356487;
+}
+.outreach-lab h2 {
+  font-size: clamp(5rem, 9vw, 9rem);
+  margin: 17px 0 20px;
+  line-height: 0.82;
+}
+.outreach-lab p {
+  font-size: 1rem;
+  max-width: 460px;
+  color: #2f4a5d;
+}
+.outreach-lab img {
+  width: 100%;
+  max-height: 490px;
+  object-fit: contain;
+  filter: drop-shadow(0 26px 25px #0c2a3d55);
+  transform: rotate(-7deg);
+}
+.outreach-cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background: #b5daf0;
+  color: #10283f;
+  padding: 15px 21px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  width: max-content;
+  max-width: 100%;
+}
+.outreach-cta:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+.outreach-next {
+  padding-block: 105px 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.outreach-next h2 {
+  max-width: 850px;
+  margin-bottom: 32px;
+}
+.outreach-missing {
+  padding-block: 130px;
+  min-height: 55vh;
+}
+.outreach-missing h1 {
+  font-size: 5rem;
+}
+.outreach-missing a {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+.outreach-detail-hero {
+  background: #102d47;
+  padding: 55px 0 95px;
+}
+.outreach-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 75px;
+  color: #bfd9e8;
+  width: max-content;
+}
+.outreach-back:hover {
+  color: #fff;
+}
+.outreach-detail-hero h1 {
+  font-size: clamp(5.5rem, 11vw, 12rem);
+  text-transform: uppercase;
+  max-width: 1100px;
+  margin: 19px 0 25px;
+}
+.outreach-detail-hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  color: #cddfeb;
+}
+.outreach-detail-cover {
+  height: min(65vw, 650px);
+  min-height: 330px;
+  overflow: hidden;
+  background: #32516b;
+}
+.outreach-detail-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+}
+.outreach-detail-story {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 800px);
+  gap: 9%;
+  padding-block: 110px 120px;
+}
+.outreach-detail-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #7399b3;
+  padding-top: 16px;
+  color: #9fc3d9;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+.outreach-detail-aside strong {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 6rem;
+  letter-spacing: 0;
+  line-height: 1;
+}
+.outreach-detail-story h2 {
+  font-size: clamp(3.6rem, 5.8vw, 6.5rem);
+  margin: 20px 0 35px;
+}
+.outreach-detail-story p:not(.outreach-source) {
+  color: #d2e2ed;
+  font-size: 1.07rem;
+  max-width: 720px;
+}
+.outreach-detail-results {
+  background: #e8f4f9;
+  color: #10283f;
+  padding-block: 90px 105px;
+}
+.outreach-detail-results .overline {
+  color: #416f8e;
+}
+.outreach-detail-results h2 {
+  font-size: clamp(3.4rem, 5vw, 5.7rem);
+  margin: 20px 0 46px;
+}
+.outreach-detail-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #81a2b5;
+}
+.outreach-detail-stats > div {
+  padding: 35px 30px 10px 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #81a2b5;
+}
+.outreach-detail-stats > div:not(:first-child) {
+  padding-left: 30px;
+}
+.outreach-detail-stats > div:last-child {
+  border-right: 0;
+}
+.outreach-detail-stats strong {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(4rem, 7vw, 7.3rem);
+  line-height: 1;
+  color: #235878;
+}
+.outreach-detail-stats span {
+  font-weight: 700;
+  font-size: 0.85rem;
+  max-width: 230px;
+  margin-top: 8px;
+}
+.outreach-detail-gallery {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 8%;
+  align-items: center;
+  padding-block: 110px;
+}
+.outreach-detail-gallery > img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}
+.outreach-detail-gallery h2 {
+  font-size: clamp(3.7rem, 5vw, 5.9rem);
+  margin: 20px 0 25px;
+}
+.outreach-detail-gallery p {
+  color: #c9dce7;
+}
+.outreach-next-project {
+  background: #1a4565;
+  padding: 35px max(40px, calc((100% - 1240px) / 2));
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2px 30px;
+  transition: background 0.2s;
+}
+.outreach-next-project:hover {
+  background: #255b7f;
+}
+.outreach-next-project span {
+  font-size: 0.69rem;
+  letter-spacing: 0.18em;
+  color: #a8cce0;
+  font-weight: 800;
+}
+.outreach-next-project strong {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.outreach-next-project svg {
+  grid-column: 2;
+  grid-row: 1/3;
+}
+.impact-hero {
+  background: #0b2033;
+  overflow: hidden;
+}
+.impact-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  min-height: 650px;
+  gap: 4%;
+}
+.impact-hero-grid > div {
+  padding-block: 95px;
+  z-index: 1;
+}
+.impact-hero h1 {
+  font-size: clamp(5.5rem, 8.7vw, 9.5rem);
+}
+.impact-hero p {
+  font-size: 1.07rem;
+  color: #d0e0e9;
+  max-width: 500px;
+  margin-bottom: 28px;
+}
+.impact-hero img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  object-position: 57% center;
+  mask-image: linear-gradient(90deg, transparent 0%, black 18%);
+}
+.impact-manifesto {
+  text-align: center;
+  padding-block: 130px;
+  max-width: 1050px;
+}
+.impact-manifesto h2 {
+  font-size: clamp(4.7rem, 8.8vw, 9.5rem);
+  margin: 25px 0 36px;
+}
+.impact-manifesto p {
+  max-width: 675px;
+  margin: auto;
+  color: #c8dce9;
+  font-size: 1.07rem;
+}
+.impact-milestones {
+  padding-bottom: 125px;
+}
+.impact-milestones-heading {
+  border-top: 1px solid #7393a8;
+  padding-top: 35px;
+}
+.impact-milestones h2 {
+  margin-bottom: 42px;
+}
+.impact-milestone-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+.impact-milestone-grid > a {
+  height: 390px;
+  position: relative;
+  overflow: hidden;
+  background: #224761;
+}
+.impact-milestone-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+  filter: saturate(0.85);
+}
+.impact-milestone-grid a:hover img {
+  transform: scale(1.06);
+}
+.impact-milestone-grid > a:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    #071e32e8 0%,
+    #071e3240 50%,
+    transparent 100%
+  );
+}
+.impact-milestone-grid > a > div {
+  position: absolute;
+  inset: auto 25px 25px;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+}
+.impact-milestone-grid strong {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(4.5rem, 7vw, 8rem);
+  grid-column: 1/-1;
+  line-height: 0.8;
+}
+.impact-milestone-grid span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  max-width: 320px;
+  margin-top: 18px;
+}
+.impact-school-band {
+  background: #a9d2e9;
+  color: #10283f;
+  overflow: hidden;
+}
+.impact-school-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8%;
+  min-height: 510px;
+}
+.impact-school-inner > div {
+  padding-block: 85px;
+}
+.impact-school-band .overline {
+  color: #376b8e;
+}
+.impact-school-band h2 {
+  font-size: clamp(4.2rem, 6vw, 7rem);
+  margin: 20px 0;
+}
+.impact-school-band p {
+  max-width: 490px;
+  font-size: 1.02rem;
+}
+.impact-school-band .outreach-cta {
+  background: #103853;
+  color: #fff;
+}
+.impact-school-band .outreach-cta:hover {
+  background: #215c80;
+}
+.impact-school-band img {
+  height: 510px;
+  width: 100%;
+  object-fit: cover;
+}
+.impact-ripple {
+  padding-block: 125px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+}
+.impact-ripple h2 {
+  margin-bottom: 25px;
+}
+.impact-ripple p {
+  color: #c9deeb;
+  max-width: 530px;
+}
+.impact-ripple-facts {
+  border-top: 1px solid #6f91aa;
+}
+.impact-ripple-facts > div {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid #6f91aa;
+  padding: 18px 0;
+}
+.impact-ripple-facts strong {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 5rem;
+  color: #a9d6ed;
+  line-height: 1;
+}
+.impact-ripple-facts span {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #d2e2ec;
+}
+.impact-end {
+  background: #193f5d;
+  text-align: center;
+  padding-block: 110px;
+}
+.impact-end h2 {
+  font-size: clamp(4.5rem, 7.6vw, 8rem);
+  max-width: 1000px;
+  margin: 25px auto 35px;
+}
+.impact-end .page-width > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.outreach-cta.outline {
+  background: transparent;
+  color: #e7f4fa;
+  border: 1px solid #a2c9de;
+}
+.outreach-cta.outline:hover {
+  background: #a2c9de;
+  color: #10283f;
+}
+.impact-end .outreach-source {
+  color: #c1d6e3;
+  margin-top: 35px;
+}
+.join-hero {
+  min-height: 670px;
+}
+.join-hero > img {
+  object-position: 60% center;
+}
+.join-hero > div {
+  padding-block: 105px;
+}
+.join-hero h1 {
+  font-size: clamp(5.5rem, 9.5vw, 10rem);
+}
+.join-hero .outreach-cta {
+  margin-top: 14px;
+}
+.join-process {
+  padding-block: 125px;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 13%;
+}
+.join-process h2 {
+  margin-bottom: 25px;
+}
+.join-process > div > p {
+  color: #c9dce7;
+}
+.join-process-stat {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 5rem;
+  color: #b1d8eb;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  line-height: 1;
+}
+.join-process-stat small {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  max-width: 160px;
+  color: #d0e0e9;
+}
+.join-process ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #7398b2;
+}
+.join-process li {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  border-bottom: 1px solid #7398b2;
+  padding: 27px 0;
+  gap: 0 20px;
+}
+.join-process li span {
+  grid-row: 1/3;
+  color: #a6cfe4;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+.join-process li strong {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 2.1rem;
+  text-transform: uppercase;
+}
+.join-process li p {
+  color: #cbdfe9;
+  font-size: 0.87rem;
+  margin: 8px 0 0;
+}
+.join-faq {
+  background: #e8f3f8;
+  color: #10283f;
+  padding-block: 115px;
+}
+.join-faq > .page-width {
+  display: grid;
+  grid-template-columns: 0.65fr 1fr;
+  gap: 12%;
+}
+.join-faq .overline {
+  color: #3a7193;
+}
+.join-faq-list {
+  border-top: 1px solid #a1becd;
+}
+.join-faq-list > div {
+  border-bottom: 1px solid #a1becd;
+}
+.join-faq-list button {
+  border: 0;
+  background: none;
+  color: #10283f;
+  width: 100%;
+  padding: 21px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 20px;
+  font-weight: 800;
+  font-size: 0.98rem;
+}
+.join-faq-list svg {
+  flex: none;
+  transition: transform 0.2s;
+}
+.join-faq-list .open svg {
+  transform: rotate(180deg);
+}
+.join-faq-list p {
+  color: #456174;
+  padding-right: 35px;
+  margin: 0 0 25px;
+  font-size: 0.9rem;
+}
+@media (max-width: 1000px) {
+  .outreach-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .outreach-project-card.feature {
+    grid-column: span 2;
+  }
+  .outreach-detail-story {
+    grid-template-columns: 120px 1fr;
+    gap: 5%;
+  }
+  .impact-hero-grid {
+    min-height: 560px;
+  }
+  .impact-hero img {
+    height: 560px;
+  }
+  .impact-ripple {
+    gap: 6%;
+  }
+}
+@media (max-width: 700px) {
+  .outreach-hero,
+  .join-hero {
+    min-height: 680px;
+    align-items: flex-end;
+  }
+  .outreach-hero:before,
+  .join-hero:before {
+    background: linear-gradient(
+      0deg,
+      #071b2e 1%,
+      #0b2439db 45%,
+      #0b243950 100%
+    );
+  }
+  .outreach-hero-copy,
+  .join-hero > div {
+    padding-block: 100px 80px;
+  }
+  .outreach-hero h1,
+  .join-hero h1,
+  .impact-hero h1 {
+    font-size: clamp(4.3rem, 16vw, 7rem);
+    margin: 20px 0 24px;
+  }
+  .outreach-hero p,
+  .join-hero p {
+    font-size: 0.95rem;
+  }
+  .outreach-hero-index {
+    display: none;
+  }
+  .outreach-intro {
+    display: block;
+    padding-block: 80px 60px;
+  }
+  .outreach-intro h2,
+  .outreach-directory h2,
+  .outreach-next h2,
+  .impact-milestones h2,
+  .impact-ripple h2,
+  .join-process h2,
+  .join-faq h2 {
+    font-size: clamp(3.3rem, 13vw, 5.5rem);
+  }
+  .outreach-intro p {
+    margin-top: 25px;
+  }
+  .outreach-directory {
+    padding-bottom: 85px;
+  }
+  .outreach-directory-head {
+    align-items: start;
+  }
+  .outreach-count {
+    font-size: 1.4rem;
+  }
+  .outreach-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 20px -18px 26px;
+    padding: 4px 18px 10px;
+    scrollbar-width: thin;
+  }
+  .outreach-filters button {
+    flex: none;
+  }
+  .outreach-project-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .outreach-project-card.feature {
+    grid-column: auto;
+    display: block;
+  }
+  .outreach-project-card.feature .outreach-project-photo {
+    height: 250px;
+    min-height: 0;
+  }
+  .outreach-project-card.feature .outreach-project-info {
+    display: block;
+    padding: 25px 27px 65px;
+  }
+  .outreach-project-photo {
+    height: 250px;
+  }
+  .outreach-project-info {
+    min-height: 210px;
+  }
+  .outreach-project-info h3 {
+    font-size: clamp(2.4rem, 7vw, 2.7rem);
+  }
+  .outreach-lab-inner {
+    display: block;
+    padding-block: 80px 0;
+  }
+  .outreach-lab h2 {
+    font-size: clamp(5.5rem, 18vw, 6.5rem);
+  }
+  .outreach-lab img {
+    height: 280px;
+    margin: 30px auto -30px;
+  }
+  .outreach-next {
+    padding-block: 85px;
+  }
+  .outreach-detail-hero {
+    padding: 30px 0 65px;
+  }
+  .outreach-back {
+    margin-bottom: 70px;
+  }
+  .outreach-detail-hero h1 {
+    font-size: clamp(3rem, 10.5vw, 5.5rem);
+  }
+  .outreach-detail-hero p {
+    font-size: 1rem;
+  }
+  .outreach-detail-cover {
+    height: 330px;
+    min-height: 0;
+  }
+  .outreach-detail-story {
+    display: block;
+    padding-block: 75px;
+  }
+  .outreach-detail-aside {
+    display: none;
+  }
+  .outreach-detail-story h2 {
+    font-size: clamp(2.8rem, 9vw, 4.8rem);
+  }
+  .outreach-detail-story p:not(.outreach-source) {
+    font-size: 0.95rem;
+  }
+  .outreach-detail-results {
+    padding-block: 75px;
+  }
+  .outreach-detail-results h2 {
+    font-size: clamp(3.45rem, 10vw, 4rem);
+  }
+  .outreach-detail-stats {
+    display: block;
+  }
+  .outreach-detail-stats > div,
+  .outreach-detail-stats > div:not(:first-child) {
+    border-right: 0;
+    border-bottom: 1px solid #a1bac8;
+    padding: 22px 0;
+  }
+  .outreach-detail-stats strong {
+    font-size: 5.5rem;
+  }
+  .outreach-detail-gallery {
+    display: block;
+    padding-block: 80px;
+  }
+  .outreach-detail-gallery > img {
+    height: 310px;
+    margin-bottom: 40px;
+  }
+  .outreach-detail-gallery h2 {
+    font-size: 4rem;
+  }
+  .outreach-next-project {
+    padding: 30px 18px;
+    column-gap: 14px;
+  }
+  .outreach-next-project strong {
+    min-width: 0;
+    font-size: clamp(2.35rem, 7vw, 3rem);
+    overflow-wrap: break-word;
+  }
+  .impact-hero-grid {
+    display: block;
+    min-height: 0;
+  }
+  .impact-hero-grid > div {
+    padding-block: 85px 55px;
+  }
+  .impact-hero img {
+    height: 330px;
+    mask-image: linear-gradient(0deg, black 65%, transparent);
+  }
+  .impact-manifesto {
+    padding-block: 90px;
+  }
+  .impact-manifesto h2 {
+    font-size: clamp(4.3rem, 14vw, 6rem);
+  }
+  .impact-milestones {
+    padding-bottom: 90px;
+  }
+  .impact-milestone-grid {
+    grid-template-columns: 1fr;
+  }
+  .impact-milestone-grid > a {
+    height: 340px;
+  }
+  .impact-milestone-grid strong {
+    font-size: 6rem;
+  }
+  .impact-school-inner {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .impact-school-band img {
+    height: 270px;
+  }
+  .impact-school-inner > div {
+    padding-block: 60px 80px;
+  }
+  .impact-school-band h2 {
+    font-size: 4.5rem;
+  }
+  .impact-ripple {
+    display: block;
+    padding-block: 90px;
+  }
+  .impact-ripple-facts {
+    margin-top: 45px;
+  }
+  .impact-ripple-facts > div {
+    grid-template-columns: 110px 1fr;
+  }
+  .impact-ripple-facts strong {
+    font-size: 4rem;
+  }
+  .impact-end {
+    padding-block: 85px;
+  }
+  .impact-end h2 {
+    font-size: 5rem;
+  }
+  .join-process {
+    display: block;
+    padding-block: 85px;
+  }
+  .join-process ol {
+    margin-top: 55px;
+  }
+  .join-faq {
+    padding-block: 85px;
+  }
+  .join-faq > .page-width {
+    display: block;
+  }
+  .join-faq-list {
+    margin-top: 38px;
+  }
+}
+.tournament-stories {
+  padding-bottom: 115px;
+}
+.tournament-heading {
+  border-top: 1px solid #7895a8;
+  padding-top: 32px;
+}
+.tournament-heading h2 {
+  font-size: clamp(3.7rem, 6.5vw, 7rem);
+  margin: 18px 0 40px;
+  max-width: 950px;
+}
+.tournament-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.tournament-grid article {
+  background: #1b4261;
+  min-width: 0;
+}
+.tournament-grid img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+.tournament-grid article > div {
+  padding: 28px 32px 30px;
+}
+.tournament-grid article > div > span {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  color: #aad0e5;
+}
+.tournament-grid h3 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  line-height: 0.9;
+  margin: 14px 0 16px;
+}
+.tournament-grid p {
+  color: #c9dce8;
+  font-size: 0.86rem;
+  min-height: 75px;
+}
+.tournament-grid strong {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 2.7rem;
+  margin-right: 27px;
+  white-space: nowrap;
+  color: #c6e6f6;
+}
+.tournament-grid small {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 0.67rem;
+  font-weight: 700;
+  vertical-align: middle;
+  color: #edf7fc;
+}
+@media (max-width: 700px) {
+  .tournament-stories {
+    padding-bottom: 80px;
+  }
+  .tournament-heading h2 {
+    font-size: clamp(3rem, 10vw, 4rem);
+  }
+  .tournament-grid {
+    grid-template-columns: 1fr;
+  }
+  .tournament-grid img {
+    height: 260px;
+  }
+  .tournament-grid h3 {
+    font-size: clamp(2.7rem, 9vw, 4rem);
+  }
+  .tournament-grid p {
+    min-height: 0;
+  }
+}
+@media (max-width: 390px) {
+  .outreach-hero h1,
+  .join-hero h1 {
+    font-size: 4.1rem;
+  }
+  .impact-hero h1 {
+    font-size: 3.6rem;
+  }
+  .outreach-directory h2 {
+    font-size: 3.3rem;
+  }
+  .outreach-lab h2 {
+    font-size: 4.4rem;
+  }
+  .impact-school-band h2,
+  .impact-end h2 {
+    font-size: 3.8rem;
+  }
+  .join-process li {
+    grid-template-columns: 65px 1fr;
+  }
+  .join-process li span {
+    font-size: 3rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .outreach-hero > img,
+  .join-hero > img {
+    animation: none;
+  }
+  .outreach-project-card,
+  .outreach-project-photo img,
+  .impact-milestone-grid img,
+  .outreach-cta {
+    transition: none;
+  }
+}
+.cad-archive {
+  background: #e7f2f7;
+  color: #10283f;
+  padding-block: 110px 120px;
+  overflow: hidden;
+}
+.cad-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  border-bottom: 1px solid #a6bfcc;
+  padding-bottom: 32px;
+}
+.cad-heading .overline,
+.cad-preview .overline {
+  color: #397091;
+}
+.cad-heading h2 {
+  font-size: clamp(4.4rem, 7vw, 8rem);
+  margin: 19px 0 22px;
+}
+.cad-heading p {
+  max-width: 680px;
+  color: #486677;
+  margin-bottom: 0;
+}
+.cad-head-mark {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 1;
+  color: #bdd2dd;
+  white-space: nowrap;
+}
+.cad-head-mark span {
+  color: #81adca;
+}
+.cad-archive-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 7%;
+  padding-top: 50px;
+}
+.cad-list {
+  border-top: 1px solid #94b0c0;
+}
+.cad-list button {
+  display: grid;
+  grid-template-columns: 50px 1fr 24px;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 23px 13px 23px 0;
+  border: 0;
+  border-bottom: 1px solid #94b0c0;
+  background: transparent;
+  color: #16374c;
+  text-align: left;
+  transition:
+    padding 0.2s,
+    background 0.2s;
+}
+.cad-list button:hover,
+.cad-list button.active {
+  padding-left: 13px;
+  background: #c9e2ee;
+}
+.cad-list button > span {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #557e94;
+}
+.cad-list strong {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+.cad-list small {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.cad-preview {
+  background: #102e46;
+  color: #f4f8fb;
+  min-height: 480px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+.cad-blueprint {
+  position: relative;
+  background:
+    linear-gradient(90deg, transparent 49.8%, #6591aa55 50%, transparent 50.2%),
+    linear-gradient(0deg, transparent 49.8%, #6591aa55 50%, transparent 50.2%),
+    repeating-linear-gradient(0deg, transparent 0 29px, #80b0c427 30px),
+    repeating-linear-gradient(90deg, transparent 0 29px, #80b0c427 30px),
+    #194662;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.cad-blueprint:after {
+  content: "";
+  position: absolute;
+  width: 165px;
+  height: 165px;
+  border: 2px solid #a4d4eb;
+  transform: rotate(45deg);
+  box-shadow:
+    0 0 0 25px #194662,
+    0 0 0 26px #a4d4eb77;
+}
+.cad-blueprint > strong {
+  position: relative;
+  z-index: 1;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 3.8rem;
+  line-height: 0.75;
+  text-align: center;
+  color: #e7f7ff;
+  transform: rotate(-45deg);
+}
+.cad-blueprint > strong span {
+  display: block;
+  font-size: 4.8rem;
+  color: #a8daf4;
+}
+.cad-ring {
+  position: absolute;
+  border: 1px solid #95c7e688;
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+}
+.cad-ring.two {
+  width: 390px;
+  height: 390px;
+  border-style: dashed;
+  opacity: 0.4;
+}
+.cad-cross {
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #b6dbed;
+}
+.cross-one {
+  top: 24px;
+  left: 25px;
+}
+.cross-two {
+  bottom: 25px;
+  right: 25px;
+}
+.cad-preview-copy {
+  padding: 48px 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.cad-preview h3 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(3.1rem, 4.4vw, 5rem);
+  margin: 14px 0 20px;
+  line-height: 0.9;
+}
+.cad-preview p {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #c3d9e6;
+  margin-bottom: 25px;
+}
+@media (max-width: 900px) {
+  .cad-archive-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .cad-preview {
+    min-height: 360px;
+  }
+  .cad-heading h2 {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 700px) {
+  .cad-archive {
+    padding-block: 80px;
+  }
+  .cad-heading h2 {
+    font-size: 4.5rem;
+  }
+  .cad-head-mark {
+    display: none;
+  }
+  .cad-archive-layout {
+    padding-top: 30px;
+  }
+  .cad-list button {
+    padding-block: 20px;
+  }
+  .cad-list strong {
+    font-size: 2rem;
+  }
+  .cad-preview {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .cad-blueprint {
+    height: 240px;
+  }
+  .cad-blueprint:after {
+    width: 125px;
+    height: 125px;
+  }
+  .cad-blueprint > strong {
+    font-size: 2.7rem;
+  }
+  .cad-blueprint > strong span {
+    font-size: 3.5rem;
+  }
+  .cad-preview-copy {
+    padding: 32px;
+  }
+  .cad-preview h3 {
+    font-size: 4rem;
+  }
+}
